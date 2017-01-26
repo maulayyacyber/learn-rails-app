@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+
+    <%= link_to 'New Article', new_article_path, class: "btn btn-success" %>
+    <table class="table table-bordered" style="margin-top: 5px">
+
+      <thead>
+        <tr>
+          <th>Judul</th>
+          <th>Thumbnail</th>
+          <th>Views</th>
+          <th>Content</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @articles.each do |article| %>
+          <tr>
+            <td><%= article.judul %></td>
+            <td><%= article.thumbnail %></td>
+            <td><%= article.views %></td>
+            <td><%= article.content %></td>
+            <td><%= link_to 'Show', article %></td>
+            <td><%= link_to 'Edit', edit_article_path(article) %></td>
+            <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+  </div>
+  <hr>
