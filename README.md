@@ -22,8 +22,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-=======
 # learn-rails-app
 Belajar Ruby on Rails
 
